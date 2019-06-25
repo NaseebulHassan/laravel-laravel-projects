@@ -42,7 +42,7 @@ class QualificationinfoController extends Controller
     public function store(Request $request)
     {
           
-            $student=$request->row[0]['Degree'];
+            
             $student=$request->row[0]['St_id'];
             
         dd($student);
