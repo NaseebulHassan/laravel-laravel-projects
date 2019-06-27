@@ -41,17 +41,13 @@ class QualificationinfoController extends Controller
      */
     public function store(Request $request)
     {
-          
-            
+             
             $student=$request->row[0]['St_id'];
-            
-        dd($student);
         $rows =$request->input('row');
-    
-       
-   
      foreach($rows as $row)
      {
+           if(!empty($row['Degree']))
+           {
             $records []=array(
                 'st_id'=>$student,
                 'degree'=>$row['Degree'],
@@ -69,9 +65,14 @@ class QualificationinfoController extends Controller
                 'copies'=>$row['Copies']
  
             );
+           };
+           
      }
     
      Qualificationinfo::insert($records);
+
+
+     
   /*      $create=studentinfo::create([
             'st_id'=>$request->st_id,
             'degree'=>$request->degree,

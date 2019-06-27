@@ -16,19 +16,19 @@ class CreateQualificationinfosTable extends Migration
         Schema::create('qualificationinfos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->biginteger('st_id')->usigned();
-            $table->string('degree')->nullable();
+            $table->string('degree')->default('1');
             $table->date('from_date')->nullable();
             $table->date('to_date')->nullable();
-            $table->string('institute_attended')->nullable();
-            $table->string('uni_board')->nullable();
-            $table->integer('obtain_marks')->nullable();
-            $table->integer('total_marks')->nullable();
-            $table->float('percentage')->nullable();
-            $table->char('grade')->nullable();
-            $table->float('cgpa')->nullable();
-            $table->string('marit')->nullable();
-            $table->string('doc_checklist')->nullable();
-            $table->integer('copies')->nullable();
+            $table->string('institute_attended')->default('1');
+            $table->string('uni_board')->default('1');
+            $table->integer('obtain_marks')->default('1');
+            $table->integer('total_marks')->default('1');
+            $table->float('percentage')->default('1');
+            $table->char('grade')->default('1');
+            $table->float('cgpa')->default('1');
+            $table->string('marit')->default('1');
+            $table->string('doc_checklist')->default('1');
+            $table->integer('copies')->default('1');
             $table->timestamps();
         });
      
