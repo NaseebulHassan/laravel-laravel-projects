@@ -15,10 +15,10 @@
                             <a href="{{ url('Qualification') }}"><i class="fa fa-angle-double-right"> </i>&nbsp;&nbsp;Qualification</a>
                         </li>
                         <li>
-                            <a href="{{ url('step3')}}"><i class="fa fa-angle-double-right"></i> &nbsp;&nbsp;Personal Info</a>
+                            <a href="{{ url('personalinfo')}}"><i class="fa fa-angle-double-right"></i> &nbsp;&nbsp;Personal Info</a>
                         </li>
                         <li>
-                            <a href="{{ url('step4') }}"><i class="fa fa-angle-double-right"></i>&nbsp;&nbsp;Sibling Detail</a>
+                            <a href="{{ url('siblings') }}"><i class="fa fa-angle-double-right"></i>&nbsp;&nbsp;Sibling Detail</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->

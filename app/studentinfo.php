@@ -7,10 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class studentinfo extends Model
 {
     //
-    public function qualificationinfo(){
-        return $this->hasMany('\App\qualificationinfo');
+    public function Qualificationinfo(){
+        return $this->hasMany('\App\Qualificationinfo');
     }
-
+    public function Personalinfo(){
+        return $this->hasMany('\App\Personalinfo');
+    }
+    public function Sibling(){
+        return $this->hasMany('\App\Sibling');
+    }
     protected  $fillable=[
         'status',
         'ceased',

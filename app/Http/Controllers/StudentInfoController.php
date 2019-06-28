@@ -12,12 +12,8 @@ class StudentInfoController extends Controller
         return view('enrollment.studentRegistration.registration');
     }
    
-    function step3(){
-        return view('enrollment.studentRegistration.step3');
-    }
-    function step4(){
-        return view('enrollment.studentRegistration.step4');
-    }
+ 
+   
     public function store(Request $request){
        
         $create=studentinfo::create([

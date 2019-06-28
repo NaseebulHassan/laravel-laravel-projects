@@ -18,14 +18,16 @@ Route::get('/', function(){
 Route::get('registration', 'StudentInfoController@registration');
 Route::get('Qualification', 'QualificationinfoController@index');
 Route::post('Qualification', 'QualificationinfoController@store');
-Route::get('step3', 'StudentInfoController@step3');
-Route::get('step4', 'StudentInfoController@step4');
+Route::get('personalinfo', 'PersonalinfoController@index');
+Route::post('personalinfo', 'PersonalinfoController@store');
+Route::get('siblings', 'SiblingController@index');
+Route::post('siblings', 'SiblingController@store');
 Route::post('/enrollment/studentRegistration/registration', 'StudentInfoController@store');
 Route::get('course', 'CourseController@create');
 Route::post('/course', 'CourseController@store');
 Route::get('/course', 'CourseController@index');
 Route::get('course/{id}/edit', 'CourseController@edit');
-Route::get('/course/update', 'CourseController@update');
+Route::get('/course/{id}/update', 'CourseController@update');
 ;
 
 Route::get('enrollment/{id}/course', 'CourseController@destroy');

@@ -116,7 +116,14 @@
                     <label for="ceased">Ceased</label>
                     <input type="checkbox" name="ceased" value="1" id="" class="form-control">
                     <label for="degree"> Degree</label>
-                    <input type="text" name="degree" class="form-control" required> 
+                     
+                    <select class="form-control" name="degree" required>
+                        <option value="">N/A</option>
+                        <option value="BSCS">BSCS</option>
+                        <option value="BSIT">BSIT</option>
+                        <option value="BBA">BBA</option>
+                        <option value="MBA">MBA</option>
+                    </select>
                     <label for="decipline_subject"> Decipline/Subject</label>
                     <input type="text" name="decipline_subject" class="form-control" required> 
                     <label for="seat_type"> Seat Type</label>
@@ -128,6 +135,7 @@
 
                     <div class="column1" >
                            <img src="../images/face.png" alt="" width="190px;" >
+                           
                            <input type="file" name="image" >
                       </div>    
 
@@ -171,7 +179,7 @@
                 <div class="column1">
                 <label for="status"> Department</label>
                     <select class="form-control" name="department" required>
-                        <option value="MComputer Sciencesale">Computer Sciences</option>
+                        <option value="Computer Sciences">Computer Sciences</option>
                         <option value="Management Sciences">Management Sciences</option>
                       
                     </select>
@@ -272,6 +280,7 @@
                                         <option value="Uncle">Uncle</option>
                                         <option value="Son">Son</option>
                                         <option value="Dughter">Dughter</option>
+                                        <option value="Father">Father</option>
                                         <option value="Mother">Mother</option>
                                         <option value="Wife">Wife</option>
                                         <option value="Aunt">Aunt</option>

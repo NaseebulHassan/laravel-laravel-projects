@@ -68,64 +68,64 @@
                     
                         <label for="step2">Degree</label>
                         <select name="row[0][Degree]" id="" class="form-control" required>
-                            <option value="">N/A</option>
-                            <option value="Ph.D">Ph.D</option>
-                            <option value="Masters">Masters</option>
-                            <option value="Bachelors">Bachelors</option>
-                            <option value="OLevels">OLevels</option>
-                            <option value="Diploma">Diploma</option>
-                            <option value="Intermediate">Intermediate</option>
+                        <option value="">N/A</option>
                             <option value="Matric">Matric</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Diploma">Diploma</option>
+                            <option value="O-Levels">O-Levels</option>
+                            <option value="Bachelor">Bachelor</option>
+                            <option value="Masters">Masters</option>                            
+                            <option value="Ph.D">Ph.D</option>
                         </select>
                         <select name="row[1][Degree]" id="" class="form-control" required>
-                            <option value="">N/A</option>
-                            <option value="Ph.D">Ph.D</option>
-                            <option value="Masters">Masters</option>
-                            <option value="Bachelors">Bachelors</option>
-                            <option value="OLevels">OLevels</option>
-                            <option value="Diploma">Diploma</option>
-                            <option value="Intermediate">Intermediate</option>
+                        <option value="">N/A</option>
                             <option value="Matric">Matric</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Diploma">Diploma</option>
+                            <option value="O-Levels">O-Levels</option>
+                            <option value="Bachelor">Bachelor</option>
+                            <option value="Masters">Masters</option>                            
+                            <option value="Ph.D">Ph.D</option>
                         </select>
                         <select name="row[2][Degree]" id="" class="form-control">
-                            <option value="">N/A</option>
-                            <option value="Ph.D">Ph.D</option>
-                            <option value="Masters">Masters</option>
-                            <option value="Bachelors">Bachelors</option>
-                            <option value="OLevels">OLevels</option>
-                            <option value="Diploma">Diploma</option>
-                            <option value="Intermediate">Intermediate</option>
+                        <option value="">N/A</option>
                             <option value="Matric">Matric</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Diploma">Diploma</option>
+                            <option value="O-Levels">O-Levels</option>
+                            <option value="Bachelor">Bachelor</option>
+                            <option value="Masters">Masters</option>                            
+                            <option value="Ph.D">Ph.D</option>
                         </select>
                         <select name="row[3][Degree]" id="" class="form-control" >
-                            <option value="">N/A</option>
-                            <option value="Ph.D">Ph.D</option>
-                            <option value="Masters">Masters</option>
-                            <option value="Bachelors">Bachelors</option>
-                            <option value="OLevels">OLevels</option>
-                            <option value="Diploma">Diploma</option>
-                            <option value="Intermediate">Intermediate</option>
+                        <option value="">N/A</option>
                             <option value="Matric">Matric</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Diploma">Diploma</option>
+                            <option value="O-Levels">O-Levels</option>
+                            <option value="Bachelor">Bachelor</option>
+                            <option value="Masters">Masters</option>                            
+                            <option value="Ph.D">Ph.D</option>
                         </select>
                         <select name="row[4][Degree]" id="" class="form-control">
-                            <option value="">N/A</option>
-                            <option value="Ph.D">Ph.D</option>
-                            <option value="Masters">Masters</option>
-                            <option value="Bachelors">Bachelors</option>
-                            <option value="OLevels">OLevels</option>
-                            <option value="Diploma">Diploma</option>
-                            <option value="Intermediate">Intermediate</option>
+                             <option value="">N/A</option>
                             <option value="Matric">Matric</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Diploma">Diploma</option>
+                            <option value="O-Levels">O-Levels</option>
+                            <option value="Bachelor">Bachelor</option>
+                            <option value="Masters">Masters</option>                            
+                            <option value="Ph.D">Ph.D</option>
                         </select>
                         <select name="row[5][Degree]" id="" class="form-control" >
-                            <option value="">N/A</option>
-                            <option value="Ph.D">Ph.D</option>
-                            <option value="Masters">Masters</option>
-                            <option value="Bachelors">Bachelors</option>
-                            <option value="OLevels">OLevels</option>
-                            <option value="Diploma">Diploma</option>
-                            <option value="Intermediate">Intermediate</option>
+                        <option value="">N/A</option>
                             <option value="Matric">Matric</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Diploma">Diploma</option>
+                            <option value="O-Levels">O-Levels</option>
+                            <option value="Bachelor">Bachelor</option>
+                            <option value="Masters">Masters</option>                            
+                            <option value="Ph.D">Ph.D</option>
                         </select>
                         
                     </div>

@@ -97,7 +97,7 @@
                                         <td>{{$row['credit_hours']}}</td>
                                         <td> 
                                      
-                                         <a href="{{action('CourseController@edit',$row['id'])}}" class="btn btn-warning " type="submit" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a>
+                                         <a href="{{url('enrollment/'.$row['id'].'/course')}}" class="btn btn-warning " type="submit"><i class="fa fa-edit"></i></a>
                                          <a href="{{url('enrollment/'.$row['id'].'/course')}}" class="btn btn-danger btn-outline-primary" type="submit"><i class="fa fa-trash"></i></a>
                                         
                                        </td>
@@ -110,34 +110,7 @@
                            
                     </form>
                     <div class="align-right">{{$course->links()}}</div>
-<form method="POST" action="{{action('/course/update',$id)}}" >
-{{csrf_field()}}
- <div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        
-        <label for="">Course Code</label>
-        <input type="text" value="{{$row['course_code']}}" class="form-control">
-        <label for="">Course Name</label>
-        <input type="text" value="{{$row['course_name']}}" class="form-control">
-        <label for="">Credit Hours</label>
-        <input type="text" value="{{$row['credit_hours']}}" class="form-control">
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
-
-  </div>
-</div>        
-</form>
 
                
 </div>

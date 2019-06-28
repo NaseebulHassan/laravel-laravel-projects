@@ -54,66 +54,72 @@
     <div class="panel panel-default">
         <div class="panel-heading ">Personal Info</div>
         <div class="panel-body">
-        <form action="" method="post">
+        <form action="{{url('/personalinfo')}}" method="post">
+        {{csrf_field()}}
             <div class="row-3">
-            <label for="">Student ID</label>
-                <input type="text" name="st_id" value="" class="form-control col-md-3" required>
+            <label for="">Student Name</label>
+               
+                <select name="st_id" id="" class="form-control" required>
+                @foreach ($students as $student)
+                          <option value="{{$student->st_id}}">{{$student->name}}</option>
+                          @endforeach
+                        </select>
             <div class="step3-column">
-                <label for="blood">Blood Group</label>
-                <select class="form-control">
+                <label for="blood ">Blood Group</label>
+                <select class="form-control" name="blood_group">
                     <option value="">N/A</option>
-                    <option value="">O -ve</option>
-                    <option value="">O +ve</option>
-                    <option value="">B -ve</option>
-                    <option value="">B +ve</option>
-                    <option value="">A -ve</option>
-                    <option value="">A +ve</option>
-                    <option value="">AB +ve</option>
-                    <option value="">AB -ve</option>
+                    <option value="O -ve">O -ve</option>
+                    <option value="O +ve">O +ve</option>
+                    <option value="B -ve">B -ve</option>
+                    <option value="B +ve">B +ve</option>
+                    <option value="A -ve">A -ve</option>
+                    <option value="A +ve">A +ve</option>
+                    <option value="AB +ve">AB +ve</option>
+                    <option value="AB -ve">AB -ve</option>
                    
                 </select>
                 <label for="blood">Martial Status</label>
-                <select class="form-control">
+                <select class="form-control" name="martial_status" required>
                     <option value="">N/A</option>
-                    <option value="">Single</option>
-                    <option value="">Married</option>
-                    <option value="">Widow</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Widow">Widow</option>
                 </select>
                 <label for="blood">Family Doctor</label>
-                <input type="text" name="doctor" class="form-control">
+                <input type="text" name="family_doctor" class="form-control">
               
            </div>
            <div class="step3-column">
            <label for="Hostel">Hostel Required?</label>
-                <select class="form-control">
-                    <option value="">No</option>
-                    <option value="">yes</option>
+                <select class="form-control" name="hostel_required" required>
+                    <option value="No">No</option>
+                    <option value="yes">yes</option>
                
                 </select>
                 <label for="transport">Transport Required?</label>
-                <select class="form-control">
-                    <option value="">No</option>
-                    <option value="">yes</option>
+                <select class="form-control" name="transport_required" required>
+                <option value="No">No</option>
+                    <option value="yes">yes</option>
                
                 </select>
            </div>
            <div class="step3-column">
            <label for="Hostelgranted">Hostel Granted</label>
-                <select class="form-control">
-                    <option value="">No</option>
-                    <option value="">yes</option>
+                <select class="form-control" name="hostel_granted" required>
+                <option value="No">No</option>
+                    <option value="yes">yes</option>
                
                 </select>
                 <label for="transportgranted">Transport Granted</label>
-                <select class="form-control">
-                    <option value="">No</option>
-                    <option value="">yes</option>
+                <select class="form-control" name="transport_granted" required>
+                <option value="No">No</option>
+                    <option value="yes">yes</option>
                
                 </select>
                 <label for="admission">Admission Granted</label>
-                <select class="form-control">
-                    <option value="">No</option>
-                    <option value="">yes</option>
+                <select class="form-control" name="addmission_granted" required>
+                <option value="No">No</option>
+                    <option value="yes">yes</option>
                
                 </select>
            </div>
@@ -122,24 +128,24 @@
       <div class="step3-column2">
            <br><br><br>
                  <label for="hobbies">Hobbies</label>
-                 <input type="text" name="hobbies" class="form-control">
+                 <input type="text" name="hobbies" class="form-control" required>
                  <label for="ailment">Suffer from any Ailment</label>
-                 <input type="text" name="ailment" class="form-control">
+                 <input type="text" name="ailment" class="form-control" >
                  <label for="remarks">Remarks About most Influenced Person</label>
                  <input type="text" name="remarks" class="form-control">
            </div>
            <div class="step3-column2">
            <br><br><br>
                  <label for="faculity">Why you have selected particular faculity for higher education? </label>
-                 <input type="text" name="faculity" class="form-control">
+                 <input type="text" name="faculity_hec" class="form-control">
                  <label for="Points">Personality Points</label>
-                 <input type="text" name="Points" class="form-control">
+                 <input type="text" name="personality_point" class="form-control">
                  <label for="Foriegn">Foriegn Country visted</label>
-                 <input type="text" name="Foriegn" class="form-control">
+                 <input type="text" name="foriegn_visit" class="form-control">
            </div>
            <div class="row col-md-12">
                        <div style="padding:50px 0px 20px 40px; width:100%" class="btn ">
-                        <input type="button" value="Submit" class="btn btn-primary btn-outline-primary " style="float:left; width:50%">
+                        <input type="submit" value="Submit" class="btn btn-primary btn-outline-primary " style="float:left; width:50%">
                         <input type="button" value="Cancel" class="btn btn-danger btn-outline-primary " style="float:left; padding-left:10px; width:50%">
                        </div>
                        
