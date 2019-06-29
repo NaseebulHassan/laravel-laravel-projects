@@ -16,6 +16,9 @@ class studentinfo extends Model
     public function Sibling(){
         return $this->hasMany('\App\Sibling');
     }
+    public function Enrollment(){
+        return $this->hasMany('\App\Enrollment');
+    }
     protected  $fillable=[
         'status',
         'ceased',

@@ -2,36 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Enrollment;
-use Illuminate\Http\Request;
 use App\Session;
-use App\studentinfo;
-use App\Course;
+use Illuminate\Http\Request;
 
-use App\instructor;
-class EnrollmentController extends Controller
+class SessionController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function studentEnroll(){
-        return view('enrollment.studentEnroll');
-    }
-    public function offeredCourses(){
-        return view('enrollment.offeredCourses');
-    }
-    public function enrollment(){
-        return view('enrollment.enrollment');
-    }
     public function index()
     {
-        $sessions=Session::all();
-        $students=studentinfo::all();
-        $courses=Course::all();
-        $instructors=instructor::all();
-        return view('enrollment.studentEnroll',compact('sessions','students','courses','instructors'));
+        //
     }
 
     /**
@@ -58,10 +41,10 @@ class EnrollmentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Enrollment  $enrollment
+     * @param  \App\Session  $session
      * @return \Illuminate\Http\Response
      */
-    public function show(Enrollment $enrollment)
+    public function show(Session $session)
     {
         //
     }
@@ -69,10 +52,10 @@ class EnrollmentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Enrollment  $enrollment
+     * @param  \App\Session  $session
      * @return \Illuminate\Http\Response
      */
-    public function edit(Enrollment $enrollment)
+    public function edit(Session $session)
     {
         //
     }
@@ -81,10 +64,10 @@ class EnrollmentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Enrollment  $enrollment
+     * @param  \App\Session  $session
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Enrollment $enrollment)
+    public function update(Request $request, Session $session)
     {
         //
     }
@@ -92,10 +75,10 @@ class EnrollmentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Enrollment  $enrollment
+     * @param  \App\Session  $session
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Enrollment $enrollment)
+    public function destroy(Session $session)
     {
         //
     }

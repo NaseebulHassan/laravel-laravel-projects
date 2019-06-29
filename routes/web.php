@@ -36,7 +36,7 @@ Route::get('enrollment/{id}/course', 'CourseController@destroy');
 Route::get('enrollment', 'EnrollmentController@enrollment');
 Route::get('instructor','InstructorController@instructor');
 Route::post('/enrollment/instructor','InstructorController@store');
-Route::get('studentEnroll','EnrollmentController@studentEnroll');
+Route::get('studentEnroll','EnrollmentController@index');
 Route::get('offeredCourses','EnrollmentController@offeredCourses');
 Route::get('attendence','AttendenceController@attendence');
 Auth::routes();
