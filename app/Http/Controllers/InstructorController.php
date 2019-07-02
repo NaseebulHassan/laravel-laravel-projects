@@ -12,10 +12,11 @@ class InstructorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function instructor()
+    public function index()
     {
         //
-        return view('enrollment.instructor');
+        $instructors=instructor::all();
+        return view('enrollment.instructor', compact('instructors'));
     }
 
     /**

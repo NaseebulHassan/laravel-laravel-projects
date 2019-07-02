@@ -52,7 +52,63 @@ class EnrollmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+                 
+            $enrolldate=$request->row[0]['Enrolldate'];
+            $enrollsemester=$request->row[0]['Enrollsemester'];
+            $session=$request->row[0]['Session'];
+            $degree=$request->row[0]['Degree'];
+            $student_name=$request->row[0]['Student_name'];
+            $father_name=$request->row[0]['Father_name'];
+            $Regno=$request->row[0]['Regno'];
+            $section=$request->row[0]['Section'];
+            $approval=$request->row[0]['Approval'];
+            $course_work=$request->row[0]['Course_work'];
+            $synopsis=$request->row[0]['Synopsis'];
+            $after_ceased=$request->row[0]['After_ceased'];
+            $chalan_no=$request->row[0]['Chalan_no'];
+            $chalan_amount=$request->row[0]['Chalan_amount'];
+            $Remarks=$request->row[0]['Remarks'];
+            $enroll_status=$request->row[0]['Enroll_status'];
+            $rows =$request->input('row');
+     foreach($rows as $row)
+     {
+           if(!empty($row['Course_name']))
+           {
+            $records []=array(
+                'enrolldate'=>$enrolldate,
+                'enrollsemester'=>$enrollsemester,
+                'session'=>$session,
+                'degree'=>$degree,
+                'student_name'=>$student_name,
+                'father_name'=>$father_name,
+                'Regno'=>$Regno,
+                'section'=>$section,
+                'approval'=>$approval,
+                'course_work'=>$course_work,
+                'synopsis'=>$synopsis,
+                'after_ceased'=>$after_ceased,
+                'chalan_no'=>$chalan_no,
+                'chalan_amount'=>$chalan_amount,
+                'Remarks'=>$Remarks,
+                'enroll_status'=>$enroll_status,
+                'Course_name'=>$row['Course_name'],
+                'course_type'=>$row['Course_type'],
+                'course_status'=>$row['Course_Status'],
+                'credit_hours'=>$row['Credit_hours'],
+                'course_incharge'=>$row['Course_incharge'],
+
+ 
+            );
+           };
+
+          
+           
+     }
+    
+     Enrollment::insert($records);
+
+     return redirect('studentEnroll')->with('message', 'submitted successfully');
+
     }
 
     /**

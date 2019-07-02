@@ -60,8 +60,8 @@
            <form action="" method="post" class="form">
           
     
-    <div class="row3 col-md-12">
-                    <div class=" col-md-3" style="padding-left:10px">
+    <div class="row3 ">
+                   
                        <label for="degree">Degree</label>
                        <select name="degree-level" id="" class="form-control">
                                         <option value="">N/A</option>
@@ -74,7 +74,7 @@
                                         <option value="">Matric</option>
                                 </select> 
                        <br>   <br>
-                    </div>  
+                
                   
                 </div> 
                 <div class="row-2">

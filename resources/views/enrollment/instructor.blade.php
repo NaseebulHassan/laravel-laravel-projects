@@ -40,7 +40,7 @@
     .panel-body{
        
         background-color:#005A57;
-        color:#005A57;
+        color:white;
        
     }
     .modal{
@@ -155,14 +155,44 @@
         </div>
 
         </form>
-            
-   
+           
   </div>
 </div>
 
 
         
         </div>
+       <br><br><br>
+            <table class="table table-bordered table-responsive-md " id="dtBasicExample" width="100%">
+                <thead>
+                    <tr>
+                        <th>Teacher Name</th>
+                        <th>Email Address</th>
+                        <th>Cell No</th>
+                        <th>Type </th>
+                        <th>Department</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach($instructors as $row)
+                    <tr>
+                        <td>{{$row['fname']}} {{$row['lastname']}}</td>
+                        <td>{{$row['email']}}</td>
+                        <td>{{$row['cellno']}}</td>
+                        <td>{{$row['type']}}</td>
+                        <td>{{$row['department']}}</td>
+                        <td><a href="" class="btn btn-danger"><i  class="fa fa-edit"></i></a>
+                        <a href="" class="btn btn-danger"><i  class="fa fa-trash"></i></a></td>
+                        
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+                 
+
+           
+   
     </div>
     
 <!-- /#page-wrapper -->

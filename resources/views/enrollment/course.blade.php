@@ -62,11 +62,12 @@
                         
                 <form method="POST" action="{{url('course')}}">
                 {{csrf_field()}}
-                        <table class="table table-bordered table-responsive-md text-center" id="dtBasicExample" width="100%">
+                        <table class="table table-bordered table-responsive-md " id="dtBasicExample" width="100%">
                             <thead >
                             <tr>
                             <th class="col-md-1">Course Code</th>
                             <th class="col-md-4">Course Name</th>
+                            <th class="col-md-1">Pre-Req</th>
                             <th class="col-md-1">Credit Hours</th>
                             <th class="col-md-1">Action</th>
                             </tr>
@@ -76,15 +77,20 @@
                                   
                                         <td><input type="text" name="rows[0][Course_code]" id="coursecode" class="form-control col-md-1" required></td>
                                         <td><input type="text" name="rows[0][Course_name]" id="coursename" class="form-control col-md-4" required></td>
+                                        <td><input type="text" name="rows[0][Pre_req]" id="credithours" class="form-control col-md-1" ></td>
                                         <td><input type="text" name="rows[0][Credit_hours]" id="credithours" class="form-control col-md-1" required></td>
-                                        <td></td>
+                                            <td> </td>
                                     </tr>
                                     <tr> 
                                   
                                     <td><input type="text" name="rows[1][Course_code]" id="coursecode" class="form-control col-md-1" required></td>
                                     <td><input type="text" name="rows[1][Course_name]" id="coursename" class="form-control col-md-4" required></td>
+                                    <td><input type="text" name="rows[1][Pre_req]" id="credithours" class="form-control col-md-1"></td>                                   
                                     <td><input type="text" name="rows[1][Credit_hours]" id="credithours" class="form-control col-md-1" required></td>
                                     <td> <button type="submit" class="btn btn-primary btn-outline-primary"> Add</button></td>
+
+                              </tr>
+                              <tr>
 
                               </tr>
                               <tr>
@@ -94,6 +100,7 @@
                                     <tr>
                                         <td>{{$row['course_code']}}</td>
                                         <td>{{$row['course_name']}}</td>
+                                        <td>{{$row['pre_req']}}</td>
                                         <td>{{$row['credit_hours']}}</td>
                                         <td> 
                                      

@@ -30,7 +30,7 @@
                     <a href="{{url('instructor')}}" ><i class="fas fa-user-graduate"></i> Add Instructor </a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i>Enrollment<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-school"></i> &nbsp;Enrollment<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
                             <a href="{{url('studentEnroll')}}"><i class="fa fa-angle-double-right"></i> Student Enrollment</a>
@@ -42,36 +42,7 @@
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
-                <li>
-                    <a href="#"><i class="fa fa-sitemap fa-fw"></i> Offered Courses<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#"><i class="fa fa-angle-double-right"></i> Second Level Item</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-angle-double-right"></i> Second Level Item</a>
-                        </li>
-                        <li>
-                            <a href="#">Third Level <span class="fa arrow"></span></a>
-                            <ul class="nav nav-third-level">
-                                <li>
-                                    <a href="#"><i class="fa fa-angle-double-right"></i> Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-angle-double-right"></i> Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-angle-double-right"></i> Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-angle-double-right"></i> Third Level Item</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-third-level -->
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
+             
                 <li>
                     <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">

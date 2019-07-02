@@ -11,7 +11,7 @@ class Course extends Model
         return $this->hasMany('\App\Enrollment');
     }
   protected  $fillable=[
-        'course_code','course_name','credit_hours'
+        'course_code','course_name','credit_hours','pre_req'
     ];
     protected $primaryKey = 'id';
     

@@ -15,7 +15,7 @@ class CourseController extends Controller
     public function index()
     {
        
-        $course =Course::paginate(10);
+        $course =Course::paginate(15);
        
         return view('enrollment.course', compact('course'));
        
@@ -49,31 +49,14 @@ class CourseController extends Controller
             $Courses []= array(
                 'course_code'=>$row['Course_code'],
             'course_name'=>$row['Course_name'],
-            'credit_hours'=>$row['Credit_hours']
+            'credit_hours'=>$row['Credit_hours'],
+            'pre_req'=>$row['Pre_req']  
+          
             );
             
         }
         Course::insert($Courses);
-      ////  Course::create($rows);
-        /* $data=[];
-        $counter=count($request['course_code']);
-      $records=$request;
-        for($i=0;$i<$counter;$i++){
-            foreach($records as $key=>$value){
-                $data[$i][$key]=$value[$i];
-            }
-        }
-        
-        $create=course::create([
-            'course_code'=>$request->course_code,
-            'course_name'=>$request->course_name,
-            'credit_hours'=>$request->credit_hours
-           
-        ]);
 
-        
-
-        */
             return redirect('/course')->with('message', 'submitted successfully');
             }
 

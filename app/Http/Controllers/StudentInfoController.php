@@ -9,7 +9,8 @@ class StudentInfoController extends Controller
 {
     //
     function registration(){
-        return view('enrollment.studentRegistration.registration');
+        $students=studentinfo::all();
+        return view('enrollment.studentRegistration.registration',compact('students'));
     }
    
  
