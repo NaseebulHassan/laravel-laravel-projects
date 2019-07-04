@@ -28,13 +28,16 @@ Route::post('/course', 'CourseController@store');
 Route::get('/course', 'CourseController@index');
 Route::get('course/{id}/edit', 'CourseController@edit');
 Route::get('/course/{id}/update', 'CourseController@update');
-;
+
 
 Route::get('enrollment/{id}/course', 'CourseController@destroy');
 
 
 Route::get('enrollment', 'EnrollmentController@enrollment');
 Route::get('instructor','InstructorController@index');
+Route::get('enrollment/{id}/instructor','InstructorController@destroy');
+
+Route::get('enrollment/{id}/edit_teacher','InstructorController@edit');
 Route::post('/enrollment/instructor','InstructorController@store');
 Route::get('studentEnroll','EnrollmentController@index');
 Route::post('StudentEnrollment','EnrollmentController@store');

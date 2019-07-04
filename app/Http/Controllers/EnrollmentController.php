@@ -52,7 +52,7 @@ class EnrollmentController extends Controller
      */
     public function store(Request $request)
     {
-                 
+           
             $enrolldate=$request->row[0]['Enrolldate'];
             $enrollsemester=$request->row[0]['Enrollsemester'];
             $session=$request->row[0]['Session'];

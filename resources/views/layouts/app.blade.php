@@ -76,5 +76,7 @@
             @yield('content')
         </main>
     </div>
+    <script src="{{assets('js/app.js')}}"></script>
+    <script src="{{assets('js/bootstrap.js')}}"></script>
 </body>
 </html>

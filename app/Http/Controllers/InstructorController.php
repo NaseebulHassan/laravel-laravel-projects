@@ -69,9 +69,10 @@ class InstructorController extends Controller
      * @param  \App\instructor  $instructor
      * @return \Illuminate\Http\Response
      */
-    public function edit(instructor $instructor)
+    public function edit($id)
     {
-        //
+        $instructors=instructor::find($id);
+        return view('enrollment.edit_teacher',compact('instructors','id'));
     }
 
     /**
@@ -81,9 +82,20 @@ class InstructorController extends Controller
      * @param  \App\instructor  $instructor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, instructor $instructor)
+    public function update(Request $request, $id)
     {
-        //
+      
+
+        $instructor = instructor::find($id);
+        $instructor->fname = $request->fname; 
+        $instructor->lastname  = $request->lastname;
+        $instructor->email     = $request->email;
+        $instructor->cellno     = $request->cellno;
+        $instructor->type     = $request->type;
+        $instructor->department     = $request->department;
+        $instructor->save();
+
+        return redirect('instructor/')->with('success' , 'Data has been updated');
     }
 
     /**
@@ -92,8 +104,12 @@ class InstructorController extends Controller
      * @param  \App\instructor  $instructor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(instructor $instructor)
+    public function destroy($id)
     {
-        //
+        $instructor=instructor::find($id);
+        $deleted=$instructor->delete();
+        if($deleted){
+         return redirect('/instructor')->with('message', 'submitted successfully'); 
+         } 
     }
 }

@@ -10,27 +10,14 @@
     <meta name="author" content="">
     <link href="../css/customstyle.css" rel="stylesheet">
 
-    <link href="../css/bootstrap/css/bootstrap.css" rel="stylesheet">
-    
-<!-- MetisMenu CSS -->
-<link href="../css/metisMenu/metisMenu.min.css" rel="stylesheet">
-
-<!-- Custom CSS -->
-<link href="../css/sb-admin-2.css" rel="stylesheet">
-
-<!-- Morris Charts CSS -->
-<link href="../css/morrisjs/morris.css" rel="stylesheet">
-
-<!-- Custom Fonts -->
-<link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-<link rel="stylesheet" type="text/css" href="fonts/css/all.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/css/all.css">
     <title>CMS-BIKAT</title>
 <style>
   h3{
@@ -62,7 +49,7 @@
                <div class="row1">
                <div class="enrol-col1">
                     <label for="">Enrolling Date</label>
-                    <input type="date" name="row[0][Enrolldate]" class="form-control" required>
+                     <p><span id="datetime"></span> </p>  
                  </div>
                  <div class="enrol-col1">
                      <label for="">Semester (Enrolling in)</label>
@@ -79,7 +66,13 @@
                  </div>
               
                  <div class="enrol-col1">
-                    
+                    <label for="">Semeter#</label>
+                    <select name="row[0][Semester]" id="" class="form-control">
+                    @foreach ($sessions as $session)
+                          <option value="{{$session->id}}">{{$session->session}}</option>
+                          @endforeach
+                   
+                    </select>
                  </div>
 
                  <div class="enrol-col1">
@@ -186,23 +179,25 @@
               <!--------------Enrollment Status-------->
 
               <div class="row3">
-                  <div class="row3-col1">
+                  <div class="row3-col1 col-md-8">
                   <label for="">Enrollment Status</label>
-                  </div>
-                
-                  <div class="row3-col3">
                   <select name="row[0][Enroll_status]" id="" class="form-control" required>
                     <option value="">N/A</option>
                     <option value="Enrolled">Enrolled</option>
                     <option value="Pending">Pending</option>
                   </select>
+                  </div>
+                
+                  <div class="row3-col3 col-md-4">
+                  <label for=""></label>
+                  <button type="button" class="btn btn-primary">Select All Courses</button>
                        
                   </div>
                  
               </div>
               <div class="row4">
               <div class="row4-col1">
-                       <label for="">Total Enrolled</label>
+                       <label for="">Course Code</label>
                        <input type="text" name="CourseCode" class="form-control">
                        <input type="text" name="CourseCode" class="form-control">
                        <input type="text" name="CourseCode" class="form-control">
@@ -588,7 +583,10 @@
 
 </div>
     <!-- /#wrapper -->
-
+    <script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+</script>
     <!-- jQuery -->
     <script src="../css/jquery/jquery.min.js"></script>
 

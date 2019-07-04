@@ -104,7 +104,7 @@
                                         <td>{{$row['credit_hours']}}</td>
                                         <td> 
                                      
-                                         <a href="{{url('enrollment/'.$row['id'].'/course')}}" class="btn btn-warning " type="submit"><i class="fa fa-edit"></i></a>
+                                         <a href="" class="btn btn-warning " type="submit"><i class="fa fa-edit"></i></a>
                                          <a href="{{url('enrollment/'.$row['id'].'/course')}}" class="btn btn-danger btn-outline-primary" type="submit"><i class="fa fa-trash"></i></a>
                                         
                                        </td>

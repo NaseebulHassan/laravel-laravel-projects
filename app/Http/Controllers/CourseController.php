@@ -115,6 +115,6 @@ class CourseController extends Controller
        if($deleted){
         return redirect('/course')->with('message', 'submitted successfully'); 
         } 
-        }
+    }
    
 }
