@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Enrollment;
+
+
+use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use DB;
+use App\Enrollment;
 use App\Session;
 use App\studentinfo;
 use App\Course;
@@ -31,6 +37,7 @@ class EnrollmentController extends Controller
         $students=studentinfo::all();
         $courses=Course::all();
         $instructors=instructor::all();
+    
         return view('enrollment.studentEnroll',compact('sessions','students','courses','instructors'));
     }
 
@@ -52,7 +59,7 @@ class EnrollmentController extends Controller
      */
     public function store(Request $request)
     {
-           
+          
             $enrolldate=$request->row[0]['Enrolldate'];
             $enrollsemester=$request->row[0]['Enrollsemester'];
             $session=$request->row[0]['Session'];
@@ -110,7 +117,7 @@ class EnrollmentController extends Controller
      return redirect('studentEnroll')->with('message', 'submitted successfully');
 
     }
-
+   
     /**
      * Display the specified resource.
      *

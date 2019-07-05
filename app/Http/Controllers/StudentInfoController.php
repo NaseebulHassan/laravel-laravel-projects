@@ -1,16 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\studentinfo;
+use App\Session;
+use Illuminate\Http\Request;
 
 class StudentInfoController extends Controller
 {
     //
-    function registration(){
+    public function index(){
         $students=studentinfo::all();
-        return view('enrollment.studentRegistration.registration',compact('students'));
+        $sessions=Session::all();
+        return view('enrollment.studentRegistration.registration',compact('students','sessions'));
     }
    
  
@@ -19,7 +20,7 @@ class StudentInfoController extends Controller
        
         $create=studentinfo::create([
             'status'=>$request->status,
-            'ceased'=>$request->ceased,
+            'session'=>$request->session,
             'semester'=>$request->semester,
             'degree'=>$request->degree,
             'shift'=>$request->shift,

@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Session extends Model
 {
-    public function enrollment(){
-        return $this->hasMany('\App\enrollment');
+    public function Enrollment(){
+        return $this->hasMany('\App\Enrollment');
+    }
+    public function studentinfo(){
+        return $this->hasMany('\App\studentinfo');
     }
 }

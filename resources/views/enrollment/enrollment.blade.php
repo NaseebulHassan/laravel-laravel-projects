@@ -49,7 +49,7 @@
 </div>
     <!-- /#wrapper -->
 
-    <script src="../js/jquery/jquery.min.js"></script>
+    <script src="../js/jquery/jquery-3.4.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/metisMenu.min.js"></script>

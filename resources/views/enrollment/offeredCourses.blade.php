@@ -423,14 +423,13 @@
 
     <!-- jQuery -->
     <!-- jQuery -->
-    <script src="../css/jquery/jquery.min.js"></script>
+    <script src="../js/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <script src="../js/script.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <!--  Menu Plugin JavaScript -->
-    <script src="../js/menu.min.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="../js/sidebar.js"></script>
+    <script src="../js/metisMenu.min.js"></script>
+    <script src="../js/raphael.min.js"></script>
+    <script src="../js/morris.min.js"></script>
+    <script src="../js/sb-admin-2.js"></script>
     <main class="py-4">
             @yield('content')
         </main>

@@ -7,9 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="../css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="resources/css.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="fonts/css/all.css">
+    <link href="{{asset('css/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/metisMenu/metisMenu.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/morrisjs/morris.css')}}" rel="stylesheet">
+    
+    <link href="{{asset('css/customstyle.css')}}" rel="stylesheet">
+    <link href="{{asset('css/sb-admin-2.css')}}" rel="stylesheet">
+    <link href="{{asset('fonts/css/all.css')}}" rel="stylesheet" >
     <title>CMS-BIKAT</title>
 
 </head>
@@ -26,10 +30,10 @@
     <!-- /.navbar-static-side -->
 </nav>
 
-<div id="page-wrapper">
+<div id="page-wrapper" >
     <div class="panel panel-default  offset-4 ">
         <div class="panel-heading ">Add Teacher</div>
-        <div class="panel-body" >
+        <div class="panel-body" style="margin-bottom:60px;">
         @if(count($errors) > 0)
 	<div class="alert alert-danger">
 		
@@ -44,7 +48,7 @@
 		<p>{{Session::get('success')}}</p>
 	</div>	
 	@endif
- <form class="form col-md-12" method="POST" action="{{url('enrollment/instructor')}}">
+ <form class="form col-md-12" method="POST" action="{{url('enrollment/instructor',$instructor->$id )}}">
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="name" class="cols-sm-2 control-label">First Name</label>
@@ -130,13 +134,16 @@
 
 </div>
     <!-- /#wrapper -->
-    <script src=".js/jquery/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/script.js"></script>
-    <script src="../js/metisMenu.min.js"></script>
-    <script src="../js/raphael.min.js"></script>
-    <script src="../js/morris.min.js"></script>
-    <script src="../js/sb-admin-2.js"></script>
+    <link href="" rel="stylesheet">
+    
+    <script src="{{asset('js/jquery/jquery-3.4.1.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/script.js')}}"></script>
+    <script src="{{asset('js/metisMenu.min.js')}}"></script>
+    <script src="{{asset('js/raphael.min.js')}}"></script>
+    <script src="{{asset('js/morris.min.js')}}"></script>
+    <script src="{{asset('js/sb-admin-2.js')}}"></script>
+ 
     <main class="py-4">
             @yield('content')
         </main>

@@ -9,12 +9,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="../css/customstyle.css" rel="stylesheet">
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
     <link href="../css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="fonts/css/all.css">
@@ -132,8 +126,13 @@
                  <div class="row2-enrol-col3">
                   <label for="Section">Section</label>
                   <input type="text" name="row[0][Section]" class="form-control">
-                 </div>                
-                
+                  
+                 </div>  
+                 <div style="float:left; padding-left:20px;">
+                 <label for="Ceased">Ceased</label>
+                  <input type="checkbox" name="Ceased" value="1" class="form-control">
+                 </div>              
+                 
               </div>
 
               <div class="row2">
@@ -183,8 +182,10 @@
                   <label for="">Enrollment Status</label>
                   <select name="row[0][Enroll_status]" id="" class="form-control" required>
                     <option value="">N/A</option>
-                    <option value="Enrolled">Enrolled</option>
-                    <option value="Pending">Pending</option>
+                    <option value="admitted">admitted</option>
+                        <option value="cancel">cancel</option>
+                        <option value="Discontinued">Discontinued</option>
+                        <option value="enrolled">enrolled</option>
                   </select>
                   </div>
                 
@@ -588,21 +589,13 @@ var dt = new Date();
 document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
 </script>
     <!-- jQuery -->
-    <script src="../css/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../css/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../css/metisMenu/metisMenu.min.js"></script>
-
-    <!-- Morris Charts JavaScript -->
-    <script src="../css/raphael/raphael.min.js"></script>
-    <script src="../css/morrisjs/morris.min.js"></script>
-    <script src="../css/morris-data.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../css/sb-admin-2.js"></script>
+    <script src="../js/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/metisMenu.min.js"></script>
+    <script src="../js/raphael.min.js"></script>
+    <script src="../js/morris.min.js"></script>
+    <script src="../js/sb-admin-2.js"></script>
     <main class="py-4">
             @yield('content')
         </main>

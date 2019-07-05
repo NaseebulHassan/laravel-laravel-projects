@@ -19,6 +19,9 @@ class studentinfo extends Model
     public function Enrollment(){
         return $this->hasMany('\App\Enrollment');
     }
+    public function Session(){
+        return $this->belogsTo('\App\Session');
+    }
     protected  $fillable=[
         'status',
         'ceased',

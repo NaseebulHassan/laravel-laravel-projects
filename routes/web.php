@@ -15,7 +15,7 @@ Route::get('/', function(){
     return view('admin.login.login');
 });
 
-Route::get('registration', 'StudentInfoController@registration');
+Route::get('registration', 'StudentInfoController@index');
 Route::get('Qualification', 'QualificationinfoController@index');
 Route::post('Qualification', 'QualificationinfoController@store');
 Route::get('personalinfo', 'PersonalinfoController@index');
@@ -36,8 +36,7 @@ Route::get('enrollment/{id}/course', 'CourseController@destroy');
 Route::get('enrollment', 'EnrollmentController@enrollment');
 Route::get('instructor','InstructorController@index');
 Route::get('enrollment/{id}/instructor','InstructorController@destroy');
-
-Route::get('enrollment/{id}/edit_teacher','InstructorController@edit');
+Route::post('enrollment/{id}/edit_teacher','InstructorController@edit');
 Route::post('/enrollment/instructor','InstructorController@store');
 Route::get('studentEnroll','EnrollmentController@index');
 Route::post('StudentEnrollment','EnrollmentController@store');

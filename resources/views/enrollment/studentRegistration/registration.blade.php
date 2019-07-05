@@ -10,26 +10,10 @@
     <meta name="author" content="">
     <link rel="stylesheet" href="../css/customstyle.css">
     <link href="../css/bootstrap/css/bootstrap.css" rel="stylesheet">
-   
-<!-- MetisMenu CSS -->
-<link href="../css/metisMenu/metisMenu.min.css" rel="stylesheet">
-
-<!-- Custom CSS -->
-<link href="../css/sb-admin-2.css" rel="stylesheet">
-
-<!-- Morris Charts CSS -->
-<link href="../css/morrisjs/morris.css" rel="stylesheet">
-
-<!-- Custom Fonts -->
-<link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-<link rel="stylesheet" type="text/css" href="fonts/css/all.css">
+    <link href="../css/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="../css/sb-admin-2.css" rel="stylesheet">
+    <link href="../css/morrisjs/morris.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/css/all.css">
     <title>CMS-BIKAT</title>
 <style>
 
@@ -52,7 +36,7 @@
 <div class="panel panel-default">
         <div class="panel-heading ">Student Registration</div>
         <div class="panel-body">
-            <form method="POST" action="{{url('enrollment/studentRegistration/registration')}}" >
+            <form method="POST" action="{{url('StudentEnrollment')}}" >
                
 {{ csrf_field() }}
                 <!-------- First Column------>
@@ -61,7 +45,7 @@
                 <div class="column col-md-4">
                 <label for="status"> Student Status</label>
                     <select class="form-control" name="status" required>
-                        <option value="N/A">N/A</option>
+                        <option value="">N/A</option>
                         <option value="admitted">admitted</option>
                         <option value="cancel">cancel</option>
                         <option value="Discontinued">Discontinued</option>
@@ -113,8 +97,15 @@
                     <div class="column col-md-4">
                     
                 
-                    <label for="ceased">Ceased</label>
-                    <input type="checkbox" name="ceased" value="1" id="" class="form-control">
+                    <label for="ceased">Session</label>
+                    <select class="form-control" name="session" required>
+                    <option value="">N/A</option>
+                    @foreach($sessions as $session)
+                        
+                        <option value="{{$session->session}}">{{$session->session}}</option>
+                     @endforeach
+                    </select>
+                
                     <label for="degree"> Degree</label>
                      
                     <select class="form-control" name="degree" required>
@@ -322,22 +313,13 @@
     <!-- /#wrapper -->
  
     <!-- jQuery -->
-    <script src="../js/jquery/jquery.min.js"></script>
-    <script src="js/script.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../css/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../css/metisMenu/metisMenu.min.js"></script>
-
-    <!-- Morris Charts JavaScript -->
-    <script src="../css/raphael/raphael.min.js"></script>
-    <script src="../css/morrisjs/morris.min.js"></script>
-    <script src="../css/morris-data.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../css/sb-admin-2.js"></script>
+    <script src="../js/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/metisMenu.min.js"></script>
+    <script src="../js/raphael.min.js"></script>
+    <script src="../js/morris.min.js"></script>
+    <script src="../js/sb-admin-2.js"></script>
     <main class="py-4">
             @yield('content')
         </main>
