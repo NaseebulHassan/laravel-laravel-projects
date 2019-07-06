@@ -21,10 +21,17 @@ class studentinfo extends Model
     }
     public function Session(){
         return $this->belogsTo('\App\Session');
+    } 
+     public function Department(){
+        return $this->belogsTo('\App\Department');
     }
+    public function Degree(){
+        return $this->belogsTo('\App\Degree');
+    }
+    
     protected  $fillable=[
         'status',
-        'ceased',
+        'session',
         'semester',
         'degree',
         'shift',

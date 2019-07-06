@@ -17,8 +17,8 @@ class CreateCoursesTable extends Migration
             $table->bigIncrements('id');
             $table->string('course_code')->unique();
             $table->string('course_name');
-            $table->string('pre_req')->nullable();
-            $table->string('credit_hours');      
+            $table->string('credit_hours'); 
+            $table->string('pre_req')->nullable();     
             $table->dateTime('deleted_at')->nullable();
             $table->timestamps();
         });

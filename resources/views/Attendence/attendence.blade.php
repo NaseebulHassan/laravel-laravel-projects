@@ -85,9 +85,9 @@
                                  <td class="att-md-2">15-arid-1234434325</td>
                                  <td class="att-md-4">Naseeb ul Hassan </td>
                                  <td class="att-md-4"> 
-                               
-                                        Present &nbsp;&nbsp;<input type="radio">&nbsp;&nbsp;
-                                        Absent &nbsp;&nbsp;<input type="radio">
+                                 <input type="radio" name="gender" value="P">  Present
+                                  <input type="radio" name="gender" value="A">  Absent
+                                       
                                     
                                  </td>
                                </tr>

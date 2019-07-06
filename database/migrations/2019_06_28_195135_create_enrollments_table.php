@@ -23,6 +23,7 @@ class CreateEnrollmentsTable extends Migration
             $table->string('father_name');
             $table->string('Regno');
             $table->string('section');
+            $table->boolean('ceased')->default('0');
             $table->string('approval');
             $table->string('course_work');
             $table->string('synopsis');

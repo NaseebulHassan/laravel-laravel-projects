@@ -19,28 +19,34 @@ class Enrollment extends Model
     public function instructor(){
         return $this->belongsTo('\App\instructor');
     }
+    public function Department(){
+        return $this->belongsTo('\App\Department');
+    }
+    public function Degree(){
+        return $this->belongsTo('\App\Degree');
+    }
 
     protected $fillable=[
         'enrolldate',
-'enrollsemester',
-'session',
-'degree',
-'student_name',
-'father_name',
-'Regno',
-'section',
-        'approval',
-'course_work',
-'synopsis',
-'after_ceased',
-'chalan_no',
-'chalan_amount',
-'Remarks',
-'enroll_status',
-'Course_name',
-'course_type',
-'course_status',
-'credit_hours',
-'course_incharge'
-    ];
+        'enrollsemester',
+        'session',
+        'degree',
+        'student_name',
+        'father_name',
+        'Regno',
+        'section',
+                'approval',
+        'course_work',
+        'synopsis',
+        'after_ceased',
+        'chalan_no',
+        'chalan_amount',
+        'Remarks',
+        'enroll_status',
+        'Course_name',
+        'course_type',
+        'course_status',
+        'credit_hours',
+        'course_incharge'
+            ];
 }

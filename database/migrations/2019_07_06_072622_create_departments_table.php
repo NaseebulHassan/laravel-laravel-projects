@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMakrsDivsTable extends Migration
+class CreateDepartmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreateMakrsDivsTable extends Migration
      */
     public function up()
     {
-        Schema::create('makrs__divs', function (Blueprint $table) {
+        Schema::create('departments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('mid');
-            $table->integer('assignment');
-            $table->integer('final');
-            $table->integer('practical');
-            $table->integer('total');
-            $table->string('credit_hours')->unique();
+            $table->string('department');
             $table->timestamps();
         });
     }
@@ -32,6 +27,6 @@ class CreateMakrsDivsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('makrs__divs');
+        Schema::dropIfExists('departments');
     }
 }

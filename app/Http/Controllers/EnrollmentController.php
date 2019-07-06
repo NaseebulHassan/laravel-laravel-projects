@@ -1,20 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
-
-
-use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
 use App\Http\Requests;
-use DB;
 use App\Enrollment;
 use App\Session;
 use App\studentinfo;
 use App\Course;
-
 use App\instructor;
+use App\Department;
+use App\Degree;
+
+use Illuminate\Http\Request;
 class EnrollmentController extends Controller
 {
     /**
@@ -25,9 +21,7 @@ class EnrollmentController extends Controller
     public function studentEnroll(){
         return view('enrollment.studentEnroll');
     }
-    public function offeredCourses(){
-        return view('enrollment.offeredCourses');
-    }
+   
     public function enrollment(){
         return view('enrollment.enrollment');
     }
@@ -37,8 +31,10 @@ class EnrollmentController extends Controller
         $students=studentinfo::all();
         $courses=Course::all();
         $instructors=instructor::all();
-    
-        return view('enrollment.studentEnroll',compact('sessions','students','courses','instructors'));
+        $departments=Department::all();
+        $degrees=Degree::all();
+        
+        return view('enrollment.studentEnroll',compact('sessions','students','courses','instructors','departments','degrees'));
     }
 
     /**
@@ -59,7 +55,7 @@ class EnrollmentController extends Controller
      */
     public function store(Request $request)
     {
-          
+       
             $enrolldate=$request->row[0]['Enrolldate'];
             $enrollsemester=$request->row[0]['Enrollsemester'];
             $session=$request->row[0]['Session'];
@@ -68,6 +64,7 @@ class EnrollmentController extends Controller
             $father_name=$request->row[0]['Father_name'];
             $Regno=$request->row[0]['Regno'];
             $section=$request->row[0]['Section'];
+            $section=$request->row[0]['Ceased'];
             $approval=$request->row[0]['Approval'];
             $course_work=$request->row[0]['Course_work'];
             $synopsis=$request->row[0]['Synopsis'];
@@ -79,7 +76,7 @@ class EnrollmentController extends Controller
             $rows =$request->input('row');
      foreach($rows as $row)
      {
-           if(!empty($row['Course_name']))
+           if(!empty($row['Student_name']))
            {
             $records []=array(
                 'enrolldate'=>$enrolldate,
@@ -90,6 +87,7 @@ class EnrollmentController extends Controller
                 'father_name'=>$father_name,
                 'Regno'=>$Regno,
                 'section'=>$section,
+                'ceased'=>$Ceased,
                 'approval'=>$approval,
                 'course_work'=>$course_work,
                 'synopsis'=>$synopsis,

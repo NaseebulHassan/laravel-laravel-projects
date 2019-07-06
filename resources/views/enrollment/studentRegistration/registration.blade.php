@@ -36,7 +36,7 @@
 <div class="panel panel-default">
         <div class="panel-heading ">Student Registration</div>
         <div class="panel-body">
-            <form method="POST" action="{{url('StudentEnrollment')}}" >
+            <form method="POST" action="{{url('registration')}}" >
                
 {{ csrf_field() }}
                 <!-------- First Column------>
@@ -100,20 +100,19 @@
                     <label for="ceased">Session</label>
                     <select class="form-control" name="session" required>
                     <option value="">N/A</option>
-                    @foreach($sessions as $session)
+                    @foreach($sessions as $row)
                         
-                        <option value="{{$session->session}}">{{$session->session}}</option>
+                        <option value="{{$row->session}}">{{$row->session}}</option>
                      @endforeach
                     </select>
                 
                     <label for="degree"> Degree</label>
                      
                     <select class="form-control" name="degree" required>
-                        <option value="">N/A</option>
-                        <option value="BSCS">BSCS</option>
-                        <option value="BSIT">BSIT</option>
-                        <option value="BBA">BBA</option>
-                        <option value="MBA">MBA</option>
+                    <option value="">N/A</option>
+                        @foreach($degrees as $degree)
+                        <option value="{{$degree->degree}}">{{$degree->degree}}</option>
+                        @endforeach
                     </select>
                     <label for="decipline_subject"> Decipline/Subject</label>
                     <input type="text" name="decipline_subject" class="form-control" required> 
@@ -125,6 +124,7 @@
 </div>
 
                     <div class="column1" >
+                    
                            <img src="../images/face.png" alt="" width="190px;" >
                           
                            <input type="file" name="image" >
@@ -155,11 +155,10 @@
                     <input type="text" name="reg_no" id="regno" maxlength="13" class="form-control">
                     <label for="predegree">Previous Degree</label>
                     <select class="form-control" name="previous_degree">
-                        <option value="BSCS">BSCS</option>
-                        <option value="BBA">BBA</option>
-                        <option value="MBA">MBA</option>
-                        <option value="MS">MS</option>
-                        <option value="PHD">PHD</option>
+                        <option value="">N/A</option>
+                        @foreach($degrees as $degree)
+                        <option value="{{$degree->degree}}">{{$degree->degree}}</option>
+                        @endforeach
                     </select>
                     <label for="name">Date of Birth</label>
                     <input type="date" name="dob" class="form-control" required>
@@ -170,9 +169,10 @@
                 <div class="column1">
                 <label for="status"> Department</label>
                     <select class="form-control" name="department" required>
-                        <option value="Computer Sciences">Computer Sciences</option>
-                        <option value="Management Sciences">Management Sciences</option>
-                      
+                    <option value="">N/A</option>
+                    @foreach($departments as $department)
+                        <option value="{{$department->department}}">{{$department->department}}</option>
+                      @endforeach
                     </select>
                     <label for="nationality">Nationality</label>
                     
@@ -184,8 +184,8 @@
                         <select class="form-control" name="religion" required>
                             <option value="Islam">Islam</option>
                             <option value="Cristian">Cristian</option>
-                            <option value="Sikhism">Sikhism</option>
-                            <option value="Hinduism">Hinduism</option>
+                            <option value="Sikhism">Sikh</option>
+                            <option value="Hinduism">Hindu</option>
                         </select>
                         <label for="name">Email</label>
                         <input type="text" name="email" class="form-control">

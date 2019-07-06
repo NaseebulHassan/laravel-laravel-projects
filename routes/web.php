@@ -16,13 +16,13 @@ Route::get('/', function(){
 });
 
 Route::get('registration', 'StudentInfoController@index');
+Route::post('registration', 'StudentInfoController@store');
 Route::get('Qualification', 'QualificationinfoController@index');
 Route::post('Qualification', 'QualificationinfoController@store');
 Route::get('personalinfo', 'PersonalinfoController@index');
 Route::post('personalinfo', 'PersonalinfoController@store');
 Route::get('siblings', 'SiblingController@index');
 Route::post('siblings', 'SiblingController@store');
-Route::post('/enrollment/studentRegistration/registration', 'StudentInfoController@store');
 Route::get('course', 'CourseController@create');
 Route::post('/course', 'CourseController@store');
 Route::get('/course', 'CourseController@index');
@@ -40,7 +40,7 @@ Route::post('enrollment/{id}/edit_teacher','InstructorController@edit');
 Route::post('/enrollment/instructor','InstructorController@store');
 Route::get('studentEnroll','EnrollmentController@index');
 Route::post('StudentEnrollment','EnrollmentController@store');
-Route::get('offeredCourses','EnrollmentController@offeredCourses');
+Route::get('offeredCourses','OfferedCourseController@index');
 Route::get('attendence','AttendenceController@attendence');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

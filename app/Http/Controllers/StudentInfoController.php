@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\studentinfo;
 use App\Session;
+use App\Department;
+use App\Degree;
 use Illuminate\Http\Request;
 
 class StudentInfoController extends Controller
@@ -11,7 +13,9 @@ class StudentInfoController extends Controller
     public function index(){
         $students=studentinfo::all();
         $sessions=Session::all();
-        return view('enrollment.studentRegistration.registration',compact('students','sessions'));
+        $departments=Department::all();
+        $degrees=Degree::all();
+        return view('enrollment.studentRegistration.registration',compact('students','sessions','departments','degrees'));
     }
    
  

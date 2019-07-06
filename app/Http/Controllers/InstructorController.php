@@ -40,8 +40,7 @@ class InstructorController extends Controller
     {
         //
         $create=instructor::create([
-            'fname'=>$request->fname,
-            'lastname'=>$request->lastname,
+            'name'=>$request->name,
             'email'=>$request->email,
             'cellno'=>$request->cellno,
             'type'=>$request->type,
@@ -87,8 +86,7 @@ class InstructorController extends Controller
       
 
         $instructor = instructor::find($id);
-        $instructor->fname = $request->fname; 
-        $instructor->lastname  = $request->lastname;
+        $instructor->name = $request->name; 
         $instructor->email     = $request->email;
         $instructor->cellno     = $request->cellno;
         $instructor->type     = $request->type;

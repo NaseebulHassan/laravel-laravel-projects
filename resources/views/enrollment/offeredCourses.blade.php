@@ -42,158 +42,215 @@
           
     
     <div class="row3 ">
-                   
-                       <label for="degree">Degree</label>
-                       <select name="degree-level" id="" class="form-control">
-                                        <option value="">N/A</option>
-                                        <option value="BSCS">BSCS</option>
-                                        <option value="BSIT">BSIT</option>
-                                        <option value="BBA">BBA</option>
-                                        <option value="MBA">MBA</option>
-                                        <option value="MS">MS</option>
-                                   
-                                </select> 
-                       <br>   <br>
-                
+                   <div> <label for="degree">Degree</label>
+                       <select name="rows[0][degree]" id="" class="form-control">
+                       <option value="">N/A</option>
+                        @foreach($degrees as $degree)
+                        <option value="{{$degree->degree}}">{{$degree->degree}}</option>
+                        @endforeach
+                     </select>
+                        </select> 
+                    </div>
+                    <div>
+                    <label for="Semester">Semester</label>
+                     <select name="rows[0][semester]" id="" class="form-control" required>
+                         <option value="">N/A</option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                         <option value="5">5</option>
+                         <option value="6">6</option>
+                         <option value="7">7</option>
+                         <option value="8">8</option>
+                     </select>
+                    </div> 
+                    
                   
                 </div> 
-                <div class="row-2">
+        <div class="row-2">
                 <div class="stenroll">
             
-            <label for="coursecode">Course Code</label>
-            <input type="text" name="coursecode" class="form-control">
-            <input type="text" name="coursecode" class="form-control">
-            <input type="text" name="coursecode" class="form-control">
-            <input type="text" name="coursecode" class="form-control">
-            <input type="text" name="coursecode" class="form-control">
-            <input type="text" name="coursecode" class="form-control">
-            <input type="text" name="coursecode" class="form-control">
-            <input type="text" name="coursecode" class="form-control">
-            
-       </div>
-       <div class="stenroll2">
+                <label for="">Course Code</label>
+                <select name="row[0][course_code]" id="" class="form-control" required>
+                       <option value="">N/A</option>
+                       
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_code}}">{{$course->course_code}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[1][course_code]" id="" class="form-control" required>
+                          <option value="">N/A</option>
+                                      
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_code}}">{{$course->course_code}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[2][course_code]" id="" class="form-control" required>
+                           <option value="">N/A</option>
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_code}}">{{$course->course_code}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[3][course_code]" id="" class="form-control" required>
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_code}}">{{$course->course_code}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[4][course_code]" id="" class="form-control" required>
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_code}}">{{$course->course_code}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[5][course_code]" id="" class="form-control" required>
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_code}}">{{$course->course_code}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[6][course_code]" id="" class="form-control">
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_code}}">{{$course->course_code}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[7][course_code]" id="" class="form-control">
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_code}}">{{$course->course_code}}</option>
+                          @endforeach
+                        </select>
+             </div>
+            <div class="stenroll2">
+                    <label for="coursetitle">Course Title</label>
+                    <select name="row[0][Course_name]" id="" class="form-control" required>
+                       <option value="">N/A</option>
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_name}}">{{$course->course_name}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[1][Course_name]" id="" class="form-control" required>
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_name}}">{{$course->course_name}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[2][Course_name]" id="" class="form-control" required>
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_name}}">{{$course->course_name}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[3][Course_name]" id="" class="form-control" required>
+                        <option value="">N/A</option>                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_name}}">{{$course->course_name}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[4][Course_name]" id="" class="form-control" required>
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_name}}">{{$course->course_name}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[5][Course_name]" id="" class="form-control" required>
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_name}}">{{$course->course_name}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[6][Course_name]" id="" class="form-control">
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_name}}">{{$course->course_name}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[7][Course_name]" id="" class="form-control">
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->course_name}}">{{$course->course_name}}</option>
+                          @endforeach
+                        </select>
+         
+                    
+            </div>
     
-            <label for="coursetitle">Course Title</label>
-            <input type="text" name="coursetitle" class="form-control">
-            <input type="text" name="coursetitle" class="form-control">
-            <input type="text" name="coursetitle" class="form-control">
-            <input type="text" name="coursetitle" class="form-control">
-            <input type="text" name="coursetitle" class="form-control">
-            <input type="text" name="coursetitle" class="form-control">
-            <input type="text" name="coursetitle" class="form-control">
-            <input type="text" name="coursetitle" class="form-control">
-        
-            
-       </div>
-       <div class="stenroll3">
-    
-            <label for="Semester">Semester</label>
-                     <select name="row[0][Enrollsemester]" id="" class="form-control" required>
-                         <option value="">N/A</option>
-                         <option value="1">1</option>
-                         <option value="2">2</option>
-                         <option value="3">3</option>
-                         <option value="4">4</option>
-                         <option value="5">5</option>
-                         <option value="6">6</option>
-                         <option value="7">7</option>
-                         <option value="8">8</option>
-                     </select>
-                     <select name="row[0][Enrollsemester]" id="" class="form-control" required>
-                         <option value="">N/A</option>
-                         <option value="1">1</option>
-                         <option value="2">2</option>
-                         <option value="3">3</option>
-                         <option value="4">4</option>
-                         <option value="5">5</option>
-                         <option value="6">6</option>
-                         <option value="7">7</option>
-                         <option value="8">8</option>
-                     </select>
-                     <select name="row[0][Enrollsemester]" id="" class="form-control" required>
-                         <option value="">N/A</option>
-                         <option value="1">1</option>
-                         <option value="2">2</option>
-                         <option value="3">3</option>
-                         <option value="4">4</option>
-                         <option value="5">5</option>
-                         <option value="6">6</option>
-                         <option value="7">7</option>
-                         <option value="8">8</option>
-                     </select>
-                     <select name="row[0][Enrollsemester]" id="" class="form-control" required>
-                         <option value="">N/A</option>
-                         <option value="1">1</option>
-                         <option value="2">2</option>
-                         <option value="3">3</option>
-                         <option value="4">4</option>
-                         <option value="5">5</option>
-                         <option value="6">6</option>
-                         <option value="7">7</option>
-                         <option value="8">8</option>
-                     </select>
-                     <select name="row[0][Enrollsemester]" id="" class="form-control" required>
-                         <option value="">N/A</option>
-                         <option value="1">1</option>
-                         <option value="2">2</option>
-                         <option value="3">3</option>
-                         <option value="4">4</option>
-                         <option value="5">5</option>
-                         <option value="6">6</option>
-                         <option value="7">7</option>
-                         <option value="8">8</option>
-                     </select>
-                     <select name="row[0][Enrollsemester]" id="" class="form-control" required>
-                         <option value="">N/A</option>
-                         <option value="1">1</option>
-                         <option value="2">2</option>
-                         <option value="3">3</option>
-                         <option value="4">4</option>
-                         <option value="5">5</option>
-                         <option value="6">6</option>
-                         <option value="7">7</option>
-                         <option value="8">8</option>
-                     </select>
-                     <select name="row[0][Enrollsemester]" id="" class="form-control" required>
-                         <option value="">N/A</option>
-                         <option value="1">1</option>
-                         <option value="2">2</option>
-                         <option value="3">3</option>
-                         <option value="4">4</option>
-                         <option value="5">5</option>
-                         <option value="6">6</option>
-                         <option value="7">7</option>
-                         <option value="8">8</option>
-                     </select>
-                     <select name="row[0][Enrollsemester]" id="" class="form-control" required>
-                         <option value="">N/A</option>
-                         <option value="1">1</option>
-                         <option value="2">2</option>
-                         <option value="3">3</option>
-                         <option value="4">4</option>
-                         <option value="5">5</option>
-                         <option value="6">6</option>
-                         <option value="7">7</option>
-                         <option value="8">8</option>
-                     </select>
-                      
-       </div>
-       <div class="stenroll">
-    <label for="credithours">Credit Hours</label>
-    <input type="text" name="credithours" class="form-control">  
-    <input type="text" name="credithours" class="form-control">  
-    <input type="text" name="credithours" class="form-control">  
-    <input type="text" name="credithours" class="form-control">  
-    <input type="text" name="credithours" class="form-control">  
-    <input type="text" name="credithours" class="form-control">  
-    <input type="text" name="credithours" class="form-control">  
-    <input type="text" name="credithours" class="form-control">  
-<br>
-    </div>
+             <div class="stenroll">
+                    <label for="credithours">Credit Hours</label>
+                    <select name="row[0][Credit_hours]" id="" class="form-control" required>
+                       <option value="">N/A</option>
+                       
+                @foreach ($courses as $course)
+                          <option value="{{$course->credit_hours}}">{{$course->credit_hours}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[1][Credit_hours]" id="" class="form-control" required>
+                          <option value="">N/A</option>
+                                      
+                @foreach ($courses as $course)
+                          <option value="{{$course->credit_hours}}">{{$course->credit_hours}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[2][Credit_hours]" id="" class="form-control" required>
+                           <option value="">N/A</option>
+                @foreach ($courses as $course)
+                          <option value="{{$course->credit_hours}}">{{$course->credit_hours}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[3][Credit_hours]" id="" class="form-control" required>
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->credit_hours}}">{{$course->credit_hours}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[4][Credit_hours]" id="" class="form-control" required>
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->credit_hours}}">{{$course->credit_hours}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[5][Credit_hours]" id="" class="form-control" required>
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->credit_hours}}">{{$course->credit_hours}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[6][Credit_hours]" id="" class="form-control">
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->credit_hours}}">{{$course->credit_hours}}</option>
+                          @endforeach
+                        </select>
+                        <select name="row[7][Credit_hours]" id="" class="form-control">
+                        <option value="">N/A</option>
+                        
+                @foreach ($courses as $course)
+                          <option value="{{$course->credit_hours}}">{{$course->credit_hours}}</option>
+                          @endforeach
+                        </select>
+                       
+            </div>
                 </div>
                <div class="row-4">
                      
-               <!-------------------marks --------->
+               <!!-------------------marks ---------!>
 
                <h3>Marks Distribution  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -203,14 +260,54 @@
             <div class="stenroll4">
             
             <label for="Mid">Mid Term</label>
-            <input type="text" name="Mid" class="form-control">    
-            <input type="text" name="Mid" class="form-control">    
-            <input type="text" name="Mid" class="form-control">    
-            <input type="text" name="Mid" class="form-control">    
-            <input type="text" name="Mid" class="form-control">    
-            <input type="text" name="Mid" class="form-control">    
-            <input type="text" name="Mid" class="form-control">    
-            <input type="text" name="Mid" class="form-control">    
+            <select name="row[0][mid]" class="form-control">
+                <option value="">N/A</option>   
+                @foreach ($marks as $mark)
+                     <option value="{{$mark->mid}}">{{$mark->mid}}</option>
+                @endforeach
+            </select>
+            <select name="row[0][mid]" class="form-control">
+                <option value="">N/A</option>   
+                @foreach ($marks as $mark)
+                     <option value="{{$mark->mid}}">{{$mark->mid}}</option>
+                @endforeach
+            </select>
+            <select name="row[0][mid]" class="form-control">
+                <option value="">N/A</option>   
+                @foreach ($marks as $mark)
+                     <option value="{{$mark->mid}}">{{$mark->mid}}</option>
+                @endforeach
+            </select>
+            <select name="row[0][mid]" class="form-control">
+                <option value="">N/A</option>   
+                @foreach ($marks as $mark)
+                     <option value="{{$mark->mid}}">{{$mark->mid}}</option>
+                @endforeach
+            </select>
+            <select name="row[0][mid]" class="form-control">
+                <option value="">N/A</option>   
+                @foreach ($marks as $mark)
+                     <option value="{{$mark->mid}}">{{$mark->mid}}</option>
+                @endforeach
+            </select>
+            <select name="row[0][mid]" class="form-control">
+                <option value="">N/A</option>   
+                @foreach ($marks as $mark)
+                     <option value="{{$mark->mid}}">{{$mark->mid}}</option>
+                @endforeach
+            </select>
+            <select name="row[0][mid]" class="form-control">
+                <option value="">N/A</option>   
+                @foreach ($marks as $mark)
+                     <option value="{{$mark->mid}}">{{$mark->mid}}</option>
+                @endforeach
+            </select>
+            <select name="row[0][mid]" class="form-control">
+                <option value="">N/A</option>   
+                @foreach ($marks as $mark)
+                     <option value="{{$mark->mid}}">{{$mark->mid}}</option>
+                @endforeach
+            </select>
             </div> 
             <div class="stenroll4">
             
